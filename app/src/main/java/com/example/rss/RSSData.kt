@@ -1,23 +1,22 @@
 package com.example.rss
 
+import android.app.Activity
+import android.app.Application
+import android.content.Context
 import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 
-class RSSData {
+class RSSData{
     companion object {
-        var myItemsClickListener: ItemsClickListener? = null
+        lateinit var context: Context
+
+        lateinit var myItemsClickListener: ItemsClickListener
+        lateinit var extendedRssItem: RSSItem
 
         var rssItemMutableList: MutableList<RSSItem> = mutableListOf()
         fun addNewItem(item: RSSItem) {
             rssItemMutableList.add(item)
         }
-
-        var recyclerView: RecyclerView? = null
-
-        var rssExtendedNameItem: String? = null
-        var rssExtendedDesItem: String? = null
-        var rssExtendedLinkItem: String? = null
-        var rssExtendedDateItem: String? = null
 
     }
 }
