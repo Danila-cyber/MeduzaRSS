@@ -23,7 +23,11 @@
             <TextView
                 android:id="@+id/recyclerview_title_rss_item"
                 style="@style/DarkPrimaryText"
-                android:layout_margin="@dimen/recyclerView_layout_margin"
+                android:layout_marginTop="@dimen/recyclerView_layout_small_margin"
+                android:layout_marginRight="@dimen/recyclerView_layout_margin"
+                android:layout_marginEnd="@dimen/recyclerView_layout_margin"
+                android:layout_marginLeft="@dimen/recyclerView_layout_margin"
+                android:layout_marginStart="@dimen/recyclerView_layout_margin"
                 android:text="@string/title"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0"

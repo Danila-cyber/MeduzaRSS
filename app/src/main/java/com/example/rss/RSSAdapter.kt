@@ -8,18 +8,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.rss.RSSAdapter.*
 
 class RSSAdapter(private val values: MutableList<RSSItem>) : RecyclerView.Adapter<MyViewHolder>() {
+    private val MAX_LENGTH_TITLE: Int = 30
+    private val MAX_LENGTH_DES: Int = 45
     private fun cuttingString(str: String, mode: Int): String {
         return if (checkLength(str, mode)) str.replaceRange(mode until str.length, "...")
         else str
     }
-
-    private fun checkLength(str: String, mode: Int): Boolean {
-        return if (str.length <= mode) false
-        else true
+    private val checkLength: (String, Int) -> Boolean = { str: String, mode: Int ->
+         str.length > mode
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView: View = LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_layouts, parent, false)
+        val itemView: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.recyclerview_layouts, parent, false)
         return MyViewHolder(itemView)
     }
 
@@ -28,8 +29,10 @@ class RSSAdapter(private val values: MutableList<RSSItem>) : RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.titleRssItem.text = cuttingString(values[position].title, (Constant.MAX_LENGTH_TITLE.value).toInt())
-        holder.desRssItem.text = cuttingString(values[position].description, (Constant.MAX_LENGTH_DES.value).toInt())
+        holder.titleRssItem.text =
+            cuttingString(values[position].title, MAX_LENGTH_TITLE)
+        holder.desRssItem.text =
+            cuttingString(values[position].description, MAX_LENGTH_DES)
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {

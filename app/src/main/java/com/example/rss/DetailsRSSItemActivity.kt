@@ -21,7 +21,6 @@ class DetailsRSSItemActivity : AppCompatActivity() {
 
         val rssItem: RSSItem? = intent.getParcelableExtra(Constant.KEY_INTENT.value)
 
-
         extendedTitleTextView.text = rssItem?.title
         extendedDesTextView.text = rssItem?.description
         extendedPubDateTextView.text = rssItem?.pubDate
