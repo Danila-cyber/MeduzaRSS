@@ -5,7 +5,6 @@ import org.w3c.dom.Element
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
 import org.xml.sax.InputSource
-import java.lang.Math.floor
 import java.net.URL
 import javax.xml.parsers.DocumentBuilder
 import javax.xml.parsers.DocumentBuilderFactory
@@ -33,9 +32,9 @@ class RSSThread {
                     val titleNode: Node = itemElem.getElementsByTagName(Constant.TITLE.value).item(0)
                     val descriptionNode: Node = itemElem.getElementsByTagName(Constant.DESCRIPTION.value).item(0)
                     val pubDate: Node = itemElem.getElementsByTagName(Constant.PUB_DATE.value).item(0)
-                    val colorTitle: Int = generateRandomColor(RSSData.context.resources.getIntArray(R.array.background_title_item))
+                    val colorTitle: Int = generateRandomColor(RSSData.context.resources.getIntArray(R.array.backgrounds_title_item))
 
-                    val rssItem: RSSItem = RSSItem(title = titleNode.textContent, des = descriptionNode.textContent, pubDate = pubDate.textContent, color = colorTitle)
+                    val rssItem: RSSItem = RSSItem(titleItem = titleNode.textContent, desItem = descriptionNode.textContent, pubDateItem = pubDate.textContent, colorItem = colorTitle)
                     RSSData.addNewItem(rssItem)
 
                 }

@@ -7,12 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary_text">#212121</color>
-    <color name="secondary_text">#757575</color>
-    <color name="bac">#8BC34A</color>
+    <color name="dark_primary_text">#212121</color>
+    <color name="dark_secondary_text">#757575</color>
     <color name="light_primary_text">#FFFFFF</color>
     <color name="default_background_title_item">#9E9E9E</color>
-    <array name="background_title_item">
+    <array name="backgrounds_title_item">
         <item>#F44336</item>
         <item>#E91E63</item>
         <item>#9C27B0</item>

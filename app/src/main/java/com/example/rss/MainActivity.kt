@@ -31,9 +31,7 @@ class MainActivity : AppCompatActivity() {
         rssData.myItemsClickListener = object : ItemsClickListener {
             override fun click(pos: Int, v: View) {
                 val intent: Intent = Intent(this@MainActivity, DetailsRSSItemActivity::class.java)
-                rssData.apply {
-                    extendedRssItem = rssItemMutableList[pos]
-                }
+                intent.putExtra(Constant.KEY_INTENT.value, RSSData.rssItemMutableList[pos])
                 startActivity(intent)
             }
         }

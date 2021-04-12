@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DarkPrimaryText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/dark_primary_text</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <style name="DarkSecondatyText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/dark_secondary_text</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+</resources>
